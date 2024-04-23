@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Component Order Form</title>
+
+    <link rel="stylesheet" href="OrderForm_Style.css">
+
+    <script src="OrderForm_Funtions.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <h1>Computer Component Order Form</h1>
+    </header>
+
+    <main>
+      <form id="order-form">
+        <!-- Form fields for user information -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value = "John Doe" required autocomplete="name"> <br>
+        
+        <h2>Computer components available:</h2>
+
+        <div class = "container">
+          <div class = "product">
+            <!-- Form fields for selecting components -->
+            <label for="cpu"><h4>CPU:</h4></label>
+            <select id="cpu" name="cpu">
+              <option value="Intel">Intel</option>
+              <option value="AMD">AMD</option>
+              <option value="Nvidia">Nvidia</option>
+              <option value="MediaTek">MediaTek</option>
+              <option value="Qualcomm">Qualcomm</option>            
+            </select>
+            <!-- Quantity input fields CPU -->
+            <label for="cpu-quantity">Quantity:</label>
+            <input type="number" id="cpu-quantity" name="cpu-quantity" min="0" value="0"><br>
+          </div>
+
+          <div class = "product">
+            <!--RAM Component-->
+            <label for="ram"><h4>RAM:</h4></label>
+            <select id="ram" name="ram">
+              <option value="Samsung">Samsung</option>
+              <option value="CORSAIR">CORSAIR</option>
+              <option value="Kingston">Kingston</option>
+              <option value="CADATA">CADATA</option>
+              <option value="Crucial">Crucial</option>
+            </select>
+            <!-- Quantity input fields RAM -->
+            <label for="ram-quantity">Quantity:</label>
+            <input type="number" id="ram-quantity" name="ram-quantity" min="0" value="0"><br>
+          </div>
+
+          <div class = "product">
+            <!--GPU Component-->
+            <label for="gpu"><h4>GPU:</h4></label>
+            <select id="gpu" name="gpu">
+              <option value="Asus">ASUS</option>
+              <option value="MSi">MSi</option>
+              <option value="Intel">Intel</option>
+              <option value="GIGABYTE">GIGABYTE</option>
+              <option value="AMD">AMD</option>
+            </select>
+            <!-- Quantity input fields GPU -->
+            <label for="gpu-quantity">Quantity:</label>
+            <input type="number" id="gpu-quantity" name="gpu-quantity" min="0" value="0"><br>
+          </div>
+
+          <div class = "product">
+            <!--Storage Component-->
+            <label for="storage"><h4>Storage:</h4></label>
+            <select id="storage" name="storage">
+              <option value="Dell">Dell</option>
+              <option value="IBM">IBM</option>
+              <option value="AMD">AMD</option>
+              <option value="Intel">Intel</option>
+              <option value="Toshiba">Toshiba</option>
+            </select>
+            <!-- Quantity input fields Storage -->
+            <label for="storage-quantity">Quantity:</label>
+            <input type="number" id="storage-quantity" name="storage-quantity" min="0" value="0"><br>
+          </div>
+
+          <div class = "product">
+            <!--Motherboard Component-->
+            <label for="motherboard"><h4>Motherboards:</h4></label>
+            <select id="motherboard" name="motherboard">
+              <option value="Intel">Intel</option>
+              <option value="MSi">MSi</option>
+              <option value="Asus">Asus</option>
+              <option value="Acer">Acer</option>
+              <option value="Biostar">Biostar</option>
+            </select>
+            <!-- Quantity input fields Motherboard -->
+            <label for="motherboard-quantity">Quantity:</label>
+            <input type="number" id="motherboard-quantity" name="motherboard-quantity" min="0" value="0"><br>
+          </div>
+
+          <div class = "product">
+            <!--Case Component-->
+            <label for="case"><h4>Case:</h4></label>
+            <select id="case" name="case">
+              <option value="Acer">Acer</option>
+              <option value="Asus">Asus</option>
+              <option value="Thermaltake">Thermaltake</option>
+              <option value="NZXT">NZXT</option>
+              <option value="Phanteks">Phanteks</option>
+            </select>
+            <!-- Quantity input fields Case -->
+            <label for="case-quantity">Quantity:</label>
+            <input type="number" id="case-quantity" name="case-quantity" min="0" value="0"><br>
+          </div>
+        </div>
+        
+      </form>
+      <!-- Buttons to see order summary and reset order -->
+      <button onclick="orderSummary()" class = "order">Place Order</button>
+      <button onclick="resetForm()" class = "reset">Reset</button>
+
+      <!-- Displaying order summary -->
+      <div id="order-summary"></div>
+    </main>
+
+    <!-- Footer with some addtional content for the site -->
+    <footer>
+      <p>Contact Us:</p>
+      <ul>
+        <li>Email: leo.wolf@iu-study.org</li>
+        <li>Phone: +49 (177) 230-4948</li>
+        <li>Address: Jakob-Heller Str.9, Frankfurt am Main, Germany</li>
+      </ul>
+    </footer>
+
+
+  </body>
+</html>

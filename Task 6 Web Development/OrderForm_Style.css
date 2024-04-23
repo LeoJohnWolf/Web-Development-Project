@@ -1,0 +1,79 @@
+/* Apply styles to the header */
+header {
+    background-color: #007bff; /* Blue color for header */
+    color: white; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Add padding */
+  }
+  
+  /* Apply styles to the main content */
+  main {
+    max-width: 600px; /* Limit width of main content */
+    margin: 0 auto; /* Center align main content */
+    padding: 20px; /* Add padding */
+  }
+  
+  /* Apply styles to form input */
+  form input[type="text"]{
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px;  /*Add bottom margin */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+  }
+
+  /* Apply styles to .container */
+  .container {
+    display: flex; /* Displaying Data in more readable fashion*/
+    flex-wrap: wrap;
+  }
+
+  /* Apply styles to .product */
+  .product {
+    flex: 0 0 calc(50% -10px); /* adjusting style in a sub catergory of .container*/
+    margin-bottom: 10px;
+  }
+
+  /* Apply styles to form elements */
+  form .product select,
+  form .product input[type="number"] {
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+  }
+  
+  /* Apply styles to .order */
+  .order {
+    background-color: #28a745; /* Green color for button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  /* Apply styles to reset button */
+  .reset {
+    background-color: #a72828; /* Green color for button */
+    color: rgb(255, 255, 255); /* White text color */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Apply styles to order summary */
+  #order-summary {
+    background-color: #f8f9fa; /* Light gray background color */
+    padding: 20px; /* Add padding */
+    margin-top: 20px; /* Add top margin */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+  }
+  
+  /* Apply styles to footer */
+  footer {
+    background-color: #007bff; /* Blue color for footer */
+    color: white; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Add padding */
+  }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src = "JavaScript_MortgageTask.js"> </script>
+	<title>Mortgage Calculator</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Mortage calculator</title>
+
+	<style>
+        /* CSS for styling the paragraph */
+        .style {
+            background-color: #f8f9fa; /* Light gray background color */
+	    	padding: 20px; /* Add padding */
+    		margin-top: 20px; /* Add top margin */
+		    border: 1px solid #ccc; /* Add border */
+	    	border-radius: 5px; /* Add border radius */
+        }
+
+		/* CSS for styling the paragraph */
+		p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+		/* Apply styles to the body content */
+		body {
+    		max-width: 600px; /* Limit width of main content */
+    		margin: 0 auto; /* Center align main content */
+   			padding: 20px; /* Add padding */
+  		}
+
+		.calculate {
+			background-color: #28a745; /* Green color for button */
+    		color: white; /* White text color */
+		   	padding: 10px 20px; /* Add padding */
+   			border: none; /* Remove border */
+    		border-radius: 5px; /* Add border radius */
+		    cursor: pointer; /* Change cursor to pointer on hover */
+			margin-block-start: 10px; /*Creating margin above the block*/
+		}
+		.reset {
+   			background-color: #a72828; /* Green color for button */
+		    color: rgb(255, 255, 255); /* White text color */
+		    padding: 10px 20px; /* Add padding */
+		    border: none; /* Remove border */
+		    border-radius: 5px; /* Add border radius */
+		    cursor: pointer; /* Change cursor to pointer on hover */
+			margin-block-start: 10px; /*Creating margin above the block*/
+  		}
+
+		.container {
+  			display: flex; /* Displaying Data in more readable fashion*/
+ 			flex-wrap: wrap;
+ 		 }
+    </style>
+
+</head>
+
+
+<body>
+	<!--Creating margin above the block-->
+	<h1> Mortgage Calculation </h1>
+
+	<!--Form for necessary requiments to calculate mortage payments-->
+	<form id = "calculate-form">
+		<!--Loan amount-->
+		<label for = "LoanMortgage"> <h3>Mortgage Loan:</h3></label>
+		<input type = "number" id = "LoanMortgage" name = "LoanMortgage" value = "1000">
+
+		<!--Term of the loan-->
+		<label for = "LoanTerm"> <h3>Loan Term (years):</h3> </label>
+		<input type = "number" id = "LoanTerm" name = "LoanTerm" value = "1">
+
+		<!--Down payment field-->
+		<label for = "DownPayment"> <h3>Down Payment:</h3> </label> 
+		<input type = "number" id = "DownPayment" name = "DownPayment" value = "0">
+
+		<!--Interest rate field-->
+		<label for = "InterestRate"> <h3>Interest Rate:</h3> </label> 
+		<input type = "number" id = "InterestRate" name = "InterestRate" value = "5">
+
+		<!--Drop box to choose what your payment period will be-->
+		<label for = "PaymentFrequency"> <h3>Payment Frequency:</h3> </label>
+		<select id = "PaymentFrequency" name = "PaymentFrequency">
+			<option value = "1"> Weekly </option>
+			<option value = "2"> Monthly </option>
+			<option value = "3"> Bi-Yearly </option>
+			<option value = "4"> Yearly </option>
+		</select>
+
+	</form>
+
+	<!--Buttons to calculate and reset input/output fields-->
+	<div class = ".container">
+		<button onclick="calculateMortgagePayment()" class = "calculate"> Calculate </button>
+		<button onclick="resetCalc()" class = "reset"> Reset </button>
+	</div>
+
+	<!--Displaying results of calculations-->
+	<div class="style">
+		<p id="result"></p>
+	</div>
+
+</body>
+</html>
